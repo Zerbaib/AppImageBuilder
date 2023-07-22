@@ -1,5 +1,5 @@
 Package: AppImageBuilder
-Version: 1.5.2
+Version: 1.6
 Section: utils
 Priority: optional
 Architecture: all

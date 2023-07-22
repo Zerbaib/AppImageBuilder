@@ -3,7 +3,7 @@
 # Script d'installation postérieure (postinst) pour le paquet AppImageBuilder
 
 # Variables pour les chemins du script et des raccourcis
-script_path="/usr/bin/AppImageBuilder.sh"
+script_path="/usr/bin/AppImageBuilder"
 desktop_file_path="/usr/share/applications/AppImageBuilder.desktop"
 
 # Mettre le script en exécution
@@ -23,7 +23,7 @@ fi
 
 # Créer le raccourci .desktop sur le bureau
 echo "[Desktop Entry]
-Version=1.5.2
+Version=1.6
 Type=Application
 Name=AppImageBuilder
 Exec=$script_path %U
