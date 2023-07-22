@@ -10,7 +10,7 @@ check_update() {
   fi
 }
 
-VERSION="v1.4"  # Update this version to the latest one when releasing a new version
+VERSION=v1.5  # Update this version to the latest one when releasing a new version
 check_update
 
 if [ $# -ne 1 ]; then
@@ -46,7 +46,7 @@ chmod +x "$appimage_file"
 
 # Create the .desktop shortcut file on the desktop
 echo "[Desktop Entry]
-Version=1.4
+Version=1.5
 Type=Application
 Name=${app_name%.*}
 Exec=\"$appimage_file\"
@@ -59,7 +59,7 @@ chmod +x "$desktop_file"
 
 # Create the .desktop file for the Start Menu
 echo "[Desktop Entry]
-Version=1.4
+Version=1.5
 Type=Application
 Name=${app_name%.*}
 Exec=\"$appimage_file\"
