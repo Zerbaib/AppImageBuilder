@@ -1,13 +1,14 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 <appimage file path>"
+  echo "Usage: $0 <appimage file>"
   exit 1
 fi
 
 appimage_file="$1"
 app_name=$(basename "$appimage_file")
 desktop_file="$(xdg-user-dir DESKTOP)/$app_name.desktop"
+start_menu_file="$HOME/.local/share/applications/$app_name.desktop"
 
 # Check if the AppImage file exists
 if [ ! -f "$appimage_file" ]; then
@@ -42,6 +43,19 @@ Categories=Utility;" > "$desktop_file"
 
 # Give execute permission to the .desktop shortcut file
 chmod +x "$desktop_file"
+
+# Create the .desktop file for the Start Menu
+echo "[Desktop Entry]
+Version=1.0
+Type=Application
+Name=${app_name%.*}
+Exec=\"$appimage_file\"
+Icon=
+Terminal=false
+Categories=Utility;" > "$start_menu_file"
+
+# Give execute permission to the .desktop file for the Start Menu
+chmod +x "$start_menu_file"
 
 # Execute the application
 "$appimage_file"
