@@ -10,7 +10,7 @@ check_update() {
   fi
 }
 
-VERSION=v1.5.1
+VERSION=v1.5.2
  # Update this version to the latest one when releasing a new version
 check_update
 
@@ -47,7 +47,7 @@ chmod +x "$appimage_file"
 
 # Create the .desktop shortcut file on the desktop
 echo "[Desktop Entry]
-Version=1.5.1
+Version=1.5.2
 Type=Application
 Name=${app_name%.*}
 Exec=\"$appimage_file\"
@@ -60,7 +60,7 @@ chmod +x "$desktop_file"
 
 # Create the .desktop file for the Start Menu
 echo "[Desktop Entry]
-Version=1.5.1
+Version=1.5.2
 Type=Application
 Name=${app_name%.*}
 Exec=\"$appimage_file\"

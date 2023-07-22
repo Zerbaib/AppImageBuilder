@@ -1,12 +1,12 @@
 Package: AppImageBuilder
-Version: 1.5.1
+Version: 1.5.2
 Section: utils
 Priority: optional
 Architecture: all
 Maintainer: Zerbaib <zerbaib@proton.me>
 Depends: bash, libgtk-3-0 | gtk3-engines-xfce, xdg-utils, curl
 Description: Automation Script for AppImages
-AppImageBuilder is a bash script that automates the usage of an AppImage on a Linux system.
-It makes the AppImage executable,
-creates a shortcut on the desktop and in the applications menu (Start Menu),
-and updates GTK libraries if necessary.
+ AppImageBuilder is a bash script that automates the usage of an AppImage on a Linux system.
+ It makes the AppImage executable,
+ creates a shortcut on the desktop and in the applications menu (Start Menu),
+ and updates GTK libraries if necessary.
