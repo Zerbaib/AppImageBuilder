@@ -23,7 +23,7 @@ fi
 
 # Créer le raccourci .desktop sur le bureau
 echo "[Desktop Entry]
-Version=1.3
+Version=1.4
 Type=Application
 Name=AppImageBuilder
 Exec=$script_path %U

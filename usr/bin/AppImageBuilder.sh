@@ -6,10 +6,11 @@ check_update() {
   current_version=$(grep '^VERSION=' $0 | cut -d '=' -f2)
   if [ "$latest_version" != "$current_version" ]; then
     echo "AppImageBuilder is not up to date. The latest version is $latest_version."
+    echo "Your version is $current_version"
   fi
 }
 
-VERSION="v1.3"  # Update this version to the latest one when releasing a new version
+VERSION="v1.4"  # Update this version to the latest one when releasing a new version
 check_update
 
 if [ $# -ne 1 ]; then
@@ -45,7 +46,7 @@ chmod +x "$appimage_file"
 
 # Create the .desktop shortcut file on the desktop
 echo "[Desktop Entry]
-Version=1.3
+Version=1.4
 Type=Application
 Name=${app_name%.*}
 Exec=\"$appimage_file\"
@@ -58,7 +59,7 @@ chmod +x "$desktop_file"
 
 # Create the .desktop file for the Start Menu
 echo "[Desktop Entry]
-Version=1.3
+Version=1.4
 Type=Application
 Name=${app_name%.*}
 Exec=\"$appimage_file\"
