@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Check if AppImageBuilder is up to date
+check_update() {
+  latest_version=$(curl -s https://api.github.com/repos/Zerbaib/AppImageBuilder/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+  current_version=$(grep '^VERSION=' $0 | cut -d '=' -f2)
+  if [ "$latest_version" != "$current_version" ]; then
+    echo "AppImageBuilder is not up to date. The latest version is $latest_version."
+  fi
+}
+
+VERSION="v1.2"  # Update this version to the latest one when releasing a new version
+check_update
+
 if [ $# -ne 1 ]; then
   echo "Usage: $0 <appimage file>"
   exit 1

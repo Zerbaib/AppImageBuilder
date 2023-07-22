@@ -1,10 +1,10 @@
 Package: AppImageBuilder
-Version: 1.0
+Version: 1.2
 Section: utils
 Priority: optional
 Architecture: all
 Maintainer: Zerbaib <zerbaib@proton.me>
-Depends: bash, libgtk-3-0 | gtk3-engines-xfce, xdg-utils
+Depends: bash, libgtk-3-0 | gtk3-engines-xfce, xdg-utils, curl
 Description: Script d'automatisation pour les AppImage
  AppImage Automation est un script en bash qui automatise l'utilisation
  d'une AppImage sur un système Linux. Il rend l'AppImage exécutable, crée
