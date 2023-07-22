@@ -1,13 +1,13 @@
 #!/bin/bash
 
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 <appimage file>"
+  echo "Usage: $0 <appimage file path>"
   exit 1
 fi
 
 appimage_file="$1"
 app_name=$(basename "$appimage_file")
-desktop_file="$HOME/Desktop/$app_name.desktop"
+desktop_file="$(xdg-user-dir DESKTOP)/$app_name.desktop"
 
 # Check if the AppImage file exists
 if [ ! -f "$appimage_file" ]; then

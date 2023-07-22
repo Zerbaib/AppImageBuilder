@@ -16,7 +16,7 @@ chmod +x AppImageBuilder.sh
 ```bash
 ./AppImageBuilder.sh <appimage file path>
 ```
-Replace **`<appimage file>`** with the path to the AppImage file you want to use.
+Replace **`<appimage file path>`** with the path to the AppImage file you want to use.
 
 3. The script will perform the following steps:
     - Check if the AppImage file exists.
