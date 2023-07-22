@@ -10,7 +10,8 @@ check_update() {
   fi
 }
 
-VERSION=v1.5  # Update this version to the latest one when releasing a new version
+VERSION=v1.5
+ # Update this version to the latest one when releasing a new version
 check_update
 
 if [ $# -ne 1 ]; then
